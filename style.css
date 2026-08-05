@@ -301,6 +301,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .video-card { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
 .video-card video, .video-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+.video-card-portrait { max-width: 300px; justify-self: start; }
+.video-card-portrait video { aspect-ratio: 9/16; object-fit: cover; }
 .video-card-info { padding: 18px 20px; }
 .video-card-title { display: block; font-weight: 700; margin-bottom: 4px; }
 .video-card-desc { display: block; font-size: 0.88rem; color: var(--fg-muted); }
