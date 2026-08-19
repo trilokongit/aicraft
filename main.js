@@ -49,8 +49,7 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.m
   }
 
   /* ---------------- Flow diagram node cycling ---------------- */
-  function animateFlow(id) {
-    const el = document.getElementById(id);
+  function animateFlow(el) {
     if (!el) return;
     const nodes = el.querySelectorAll(".flow-node");
     if (!nodes.length) return;
@@ -86,8 +85,7 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.m
     );
     io.observe(el);
   }
-  animateFlow("flowDiagram");
-  animateFlow("flowDiagram2");
+  document.querySelectorAll(".flow-diagram").forEach(animateFlow);
 
   /* ---------------- Contact form -> WhatsApp ---------------- */
   const contactForm = document.getElementById("contactForm");
